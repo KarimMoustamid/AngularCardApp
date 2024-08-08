@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
 
 @Component({
@@ -11,5 +11,8 @@ import {NgOptimizedImage} from "@angular/common";
   styleUrl: './card.component.css'
 })
 export class CardComponent {
-
+  @Input() title = '';
+  @Input() imageUrl = '';
+  @Input() content = '';
+  @Input() username = '';
 }
