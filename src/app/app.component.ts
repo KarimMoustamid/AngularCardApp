@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {CardComponent} from "./card/card.component";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CardComponent],
+  imports: [RouterOutlet, CardComponent, NgForOf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -28,6 +29,12 @@ export class AppComponent {
             imageUrl: './assets/mountain.jpg',
             username: 'adventure',
             content: 'Mountain Biking is a thrilling experience!'
+        },
+        {
+            title: "New Title",
+            imageUrl: './assets/new.jpg',
+            username: 'new-user',
+            content: 'Some new content'
         },
     ]
 }
